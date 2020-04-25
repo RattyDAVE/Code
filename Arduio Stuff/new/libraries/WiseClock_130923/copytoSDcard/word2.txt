@@ -1,0 +1,112 @@
+# word2.txt the SHORT version for WiseClock3
+#
+# Make any change you like but do NOT MOVE or DELETE any line 
+# and only change the texts BEHIND THE SINGLE SPACE AFTER THE : (COLON)
+# Comment lines start with a #
+#
+# The hours 1 - 12 and 13 - 24
+N1: one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve
+N2: one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve
+# or N2: thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|twenty-one|twenty-two|twenty-three|twenty-four
+#
+# A1: The AM / PM indicator, see "M01: " below
+# A1: AM|PM  or  A1: am|pm  or  A1: a.m.|p.m.  or blank or  whatever you like.
+A1: am|pm
+#
+# the full hours texts 
+H00: It's midnight
+H01: It's one o'clock %A
+H02: It's two o'clock %A
+H03: It's three o'clock %A
+H04: It's four o'clock %A
+H05: It's five o'clock %A
+H06: It's six o'clock %A
+H07: It's seven o'clock %A
+H08: It's eight o'clock %A
+H09: It's nine o'clock %A
+H10: It's ten o'clock %A
+H11: It's eleven o'clock %A
+H12: It's noon
+H13: It's one o'clock %A
+H14: It's two o'clock %A
+H15: It's three o'clock %A
+H16: It's four o'clock %A
+H17: It's five o'clock %A
+H18: It's six o'clock %A
+H19: It's seven o'clock %A
+H20: It's eight o'clock %A
+H21: It's nine o'clock %A
+H22: It's ten o'clock %A
+H23: It's eleven o'clock %A
+#
+# Use %H to insert the Hour (see N1: above) into the following Minutes texts 
+# Use %H+1 to insert the Hour plus one into the Minutes texts 
+# Use %A to insert the "A1: " text AM / PM
+#
+# All minutes lines from 1 - 59 must be present
+#
+# We do not use "M00: " but use "H00: ", "H01: ", "H02: " etc. on the full hour
+#
+M01: It's %H oh-one %A 
+M02: It's %H oh-two %A  
+M03: It's %H oh-three %A 
+M04: It's %H oh-four %A 
+M05: It's %H oh-five %A 
+M06: It's %H oh-six %A 
+M07: It's %H oh-seven %A 
+M08: It's %H oh-eight %A 
+M09: It's %H oh-nine %A 
+M10: It's %H ten %A 
+M11: It's %H eleven %A 
+M12: It's %H twelve %A 
+M13: It's %H thirteen %A 
+M14: It's %H fourteen %A 
+M15: It's a quarter past %H %A 
+M16: It's %H sixteen %A 
+M17: It's %H seventeen %A 
+M18: It's %H eighteen %A
+M19: It's %H nineteen %A
+M20: It's %H twenty %A
+M21: It's %H twenty-one %A 
+M22: It's %H twenty-two %A
+M23: It's %H twenty-three %A
+M24: It's %H twenty-four %A
+M25: It's %H twenty-five %A
+M26: It's %H twenty-six %A
+M27: It's %H twenty-seven %A
+M28: It's %H twenty-eight %A
+M29: It's %H twenty-nine %A
+M30: It's half past %H %A
+M31: It's %H thirty-one %A
+M32: It's %H thirty-two %A
+M33: It's %H thirty-three %A
+M34: It's %H thirty-four %A
+M35: It's %H thirty-five %A
+M36: It's %H thirty-six %A
+M37: It's %H thirty-seven %A
+M38: It's %H thirty-eight %A
+M39: It's %H thirty-nine %A
+M40: It's %H fourty %A
+M41: It's %H fourty-one %A
+M42: It's %H fourty-two %A
+M43: It's %H fourty-three %A
+M44: It's %H fourty-four %A
+M45: It's a quarter to %H+1 %A
+M46: It's %H fourty-six %A
+M47: It's %H fourty-seven %A
+M48: It's %H fourty-eight %A
+M49: It's %H fourty-nine %A
+M50: It's %H fifty %A
+M51: It's %H fifty-one %A 
+M52: It's %H fifty-two %A
+M53: It's %H fifty-three %A
+M54: It's %H fifty-four %A
+M55: It's %H fifty-five %A
+M56: It's %H fifty-six %A
+M57: It's %H fifty-seven %A
+M58: It's %H fifty-eight %A
+M59: It's %H fifty-nine %A
+#
+ = EOF do not remove
+  
+   

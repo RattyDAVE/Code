@@ -1,0 +1,171 @@
+# word1.txt  The "official" English version for WiseClock3
+#
+# Make any change you like but do NOT MOVE or DELETE any line 
+# and only change the texts BEHIND THE SINGLE SPACE AFTER THE : (COLON)
+# Comment lines start with #, the | character is used as seperator, no line in this file should be longer then 175 characters
+#
+# The hours 1 - 12 and 13 - 24, each item is max. 20 characters long!
+N1: one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve
+N2: one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve
+# or N2: thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|twenty-one|twenty-two|twenty-three|twenty-four
+#
+# A1: The AM / PM indicator, see "M01: " below
+# A1: AM|PM  or  A1: am|pm  or  A1: a.m.|p.m.  or  whatever you like. Max. 20 characters long!
+A1: AM|PM
+#
+# Additional optional texts used in the Minutes texts (instead of AM / PM ?) Max. 50 characters long!
+T00: Good Night
+T01: Good Night
+T02: Good Night
+T03: Good Night
+T04: Good Morning
+T05: Good Morning
+T06: Good Morning
+T07: Good Morning
+T08: Good Morning
+T09: Good Morning
+T10: Good Morning
+T11: Good Morning
+T12: Good Afternoon
+T13: Good Afternoon
+T14: Good Afternoon
+T15: Good Afternoon
+T16: Good Afternoon
+T17: Good Afternoon
+T18: Good Evening
+T19: Good Evening
+T20: Good Evening
+T21: Good Night
+T22: Good Night
+T23: Good Night
+#
+# The full hours texts, Max. length = 175 characters !
+H00: It is Midnight
+H01: The time is: One o'clock at night
+H02: The time is: Two o'clock at night
+H03: The time is: Three o'clock at night
+H04: The time is: Four o'clock in the morning
+H05: The time is: Five o'clock in the morning
+H06: The time is: Six o'clock in the morning
+H07: The time is: Seven o'clock in the morning
+H08: The time is: Eight o'clock in the morning
+H09: The time is: Nine o'clock in the morning
+H10: The time is: Ten o'clock in the morning
+H11: The time is: Eleven o'clock in the morning
+H12: It is Noon
+H13: The time is: One o'clock in the afternoon
+H14: The time is: Two o'clock in the afternoon
+H15: The time is: Three o'clock in the afternoon
+H16: The time is: Four o'clock in the afternoon
+H17: The time is: Five o'clock in the afternoon
+H18: The time is: Six o'clock in the evening
+H19: The time is: Seven o'clock in the evening
+H20: The time is: Eight o'clock in the evening
+H21: The time is: Nine o'clock at night
+H22: The time is: Ten o'clock at night
+H23: The time is: Eleven o'clock at night
+#
+#
+# Use %H to insert the Hour (see N1: above) into the following Minutes texts 
+# Use %H+1 to insert the Hour plus one into the Minutes texts 
+# Use %A to insert the "A1: " text AM / PM
+# Use %T or %T+1 to insert the "T??: " texts like "Good Morning", see "T??: " above
+#
+# All minutes lines from 1 - 59 must be present
+#
+# We do not use "M00: " but use "H00: ", "H01: ", "H02: " etc. on the full hour
+#
+# The complete text including all substituted parameters cannot be longer then 175 characters!
+#
+M01: %T, It's one minute past %H o'clock
+#    or M01: %T, It's one minute past %H o'clock %A (if you want the AM/PM indicator)
+M02: %T, It's two minutes past %H o'clock 
+M03: %T, It's three minutes past %H o'clock
+M04: %T, It's four minutes past %H o'clock
+M05: %T, It's five minutes past %H o'clock
+M06: %T, It's six minutes past %H o'clock
+M07: %T, It's seven minutes past %H o'clock
+M08: %T, It's eight minutes past %H o'clock
+M09: %T, It's nine minutes past %H o'clock
+M10: %T, It's ten minutes past %H o'clock
+M11: %T, It's eleven minutes past %H o'clock
+M12: %T, It's twelve minutes past %H o'clock
+M13: %T, It's thirteen minutes past %H o'clock
+M14: %T, It's fourteen minutes past %H o'clock
+M15: %T, It's a quarter past %H o'clock
+M16: %T, It's sixteen minutes past %H o'clock
+M17: %T, It's seventeen minutes past %H o'clock
+M18: %T, It's eighteen minutes past %H o'clock
+M19: %T, It's nineteen minutes past %H o'clock
+M20: %T, It's twenty minutes past %H o'clock
+M21: %T, It's twenty-one minutes past %H o'clock
+M22: %T, It's twenty-two minutes past %H o'clock
+M23: %T, It's twenty-three minutes past %H o'clock
+M24: %T, It's twenty-four minutes past %H o'clock
+M25: %T, It's twenty-five minutes past %H o'clock
+M26: %T, It's twenty-six minutes past %H o'clock
+M27: %T, It's twenty-seven minutes past %H o'clock
+M28: %T, It's twenty-eight minutes past %H o'clock
+M29: %T, It's twenty-nine minutes past %H o'clock
+M30: %T, It's half past %H
+M31: %T, It's twenty-nine minutes to %H+1 o'clock
+M32: %T, It's twenty-eight minutes to %H+1 o'clock
+M33: %T, It's twenty-seven minutes to %H+1 o'clock
+M34: %T, It's twenty-six minutes to %H+1 o'clock
+M35: %T, It's twenty-five minutes to %H+1 o'clock
+M36: %T, It's twenty-four minutes to %H+1 o'clock
+M37: %T, It's twenty-three minutes to %H+1 o'clock
+M38: %T, It's twenty-two minutes to %H+1 o'clock
+M39: %T, It's twenty-one minutes to %H+1 o'clock
+M40: %T, It's twenty minutes to %H+1 o'clock
+M41: %T, It's nineteen minutes to %H+1 o'clock
+M42: %T, It's eighteen minutes to %H+1 o'clock
+M43: %T, It's seventeen minutes to %H+1 o'clock
+M44: %T, It's sixteen minutes to %H+1 o'clock
+M45: %T, It's a quarter to %H+1 o'clock
+M46: %T, It's fourteen minutes to %H+1 o'clock
+M47: %T, It's thirteen minutes to %H+1 o'clock
+M48: %T, It's twelve minutes to %H+1 o'clock
+M49: %T, It's eleven minutes to %H+1 o'clock
+M50: %T, It's ten minutes to %H+1 o'clock
+M51: %T, It's nine minutes to %H+1 o'clock
+M52: %T, It's eight minutes to %H+1 o'clock
+M53: %T, It's seven minutes to %H+1 o'clock
+M54: %T, It's six minutes to %H+1 o'clock
+M55: %T, It's five minutes to %H+1 o'clock
+M56: %T, It's four minutes to %H+1 o'clock
+M57: %T, It's three minutes to %H+1 o'clock
+M58: %T, It's two minutes to %H+1 o'clock
+M59: %T, It's one minute to %H+1 o'clock
+#
+# the 7 days of the week starting with Monday, max. 20 characters long!
+DW: Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday
+#
+# the 12 months, max. 20 characters long!
+DM: January|February|March|April|May|June|July|August|September|October|November|December
+#
+# the 31 days of the month in groups of ten, max. 20 characters long!
+D1: first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth
+D2: eleventh|twelfth|thirteenth|fourteenth|fifteenth|sixteenth|seventeenth|eighteenth|nineteenth|twentieth
+D3: twenty-first|twenty-second|twenty-third|twenty-fourth|twenty-fifth|twenty-sixth|twenty-seventh|twenty-eighth|twenty-ninth|thirtieth
+D4: thirty-first
+#
+# leave DT: blank if you do not want the date to appear.
+DT: on %DW, the %DN of %DM.
+#   on Tuesday, the first of May.
+#   %DW = day of the week, %DN = day number, %DM = month of the year
+#
+# Use the following if you want a date like:
+#   on Tuesday May one.
+#
+# the 31 days of the month in groups of ten
+# D1: one|two|three|four|five|six|seven|eight|nine|ten
+# D2: eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty
+# D3: twenty-one|twenty-two|twenty-three|twenty-four|twenty-five|twenty-six|twenty-seven|twenty-eight|twenty-nine|thirty
+# D4: thirty-one
+#
+# DT: on %DW %DM %DN.
+#
+ = EOF do not remove
+  
+   

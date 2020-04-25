@@ -1,0 +1,156 @@
+# word8.txt  Sample texts for advertisement
+#
+# Make any change you like but do NOT MOVE or DELETE any line 
+# and only change the texts BEHIND THE SINGLE SPACE AFTER THE : (Colon)
+# Comment lines start with a #
+#
+# the hours 1 - 12 and 13 - 24
+N1: one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve
+N2: thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|twenty-one|twenty-two|twenty-three|twenty-four
+#
+# A1: AM / PM indicator, not used in 24 hour mode, see "M01: " below
+# A1: AM|PM  or  A1: am|pm  or  A1: a.m.|p.m.  or  whatever you like.
+A1: AM|PM
+#
+# additional optional texts used in the Minutes texts 
+T00: We are now closed, opening hours are from 9 - 5
+T01: We are now closed, opening hours are from 9 - 5 
+T02: We are now closed, opening hours are from 9 - 5  
+T03: We are now closed, opening hours are from 9 - 5 
+T04: We are now closed, opening hours are from 9 - 5 
+T05: We are now closed, opening hours are from 9 - 5 
+T06: We are now closed, opening hours are from 9 - 5 
+T07: We are now closed, opening hours are from 9 - 5
+T08: We are now closed, but will open at 9
+T09: Only from 9 - 11 buy 2 and pay for 1!
+T10: Only from 9 - 11 buy 2 and pay for 1!
+T11: Only from 9 - 11 buy 2 and pay for 1!
+T12: 10% extra discount from 12 - 1  
+T13: Free give-a-ways from 1 - 3
+T14: Free give-a-ways from 1 - 3
+T15: Free give-a-ways from 1 - 3 
+T16: Hurry up please, we are closing at 5
+T17: We are now closed, opening hours are from 9 - 5
+T18: We are now closed, opening hours are from 9 - 5
+T19: We are now closed, opening hours are from 9 - 5
+T20: We are now closed, opening hours are from 9 - 5
+T21: We are now closed, opening hours are from 9 - 5
+T22: We are now closed, opening hours are from 9 - 5
+T23: We are now closed, opening hours are from 9 - 5
+#
+# the full hours
+H00: We are now closed, opening hours are from 9 - 5
+H01: We are now closed, opening hours are from 9 - 5 
+H02: We are now closed, opening hours are from 9 - 5  
+H03: We are now closed, opening hours are from 9 - 5 
+H04: We are now closed, opening hours are from 9 - 5 
+H05: We are now closed, opening hours are from 9 - 5 
+H06: We are now closed, opening hours are from 9 - 5 
+H07: We are now closed, opening hours are from 9 - 5
+H08: We are now closed, opening hours are from 9 - 5
+H09: Only from 9 - 11 buy 2 and pay for 1!
+H10: Only from 9 - 11 buy 2 and pay for 1!
+H11: Only from 9 - 11 buy 2 and pay for 1!
+H12: 10% extra discount from 12 - 1  
+H13: Free give-a-ways from 1 - 3
+H14: Free give-a-ways from 1 - 3
+H15: Free give-a-ways from 1 - 3 
+H16: Hurry up please, we are closing at 5
+H17: We are now closed, opening hours are from 9 - 5
+H18: We are now closed, opening hours are from 9 - 5
+H19: We are now closed, opening hours are from 9 - 5
+H20: We are now closed, opening hours are from 9 - 5
+H21: We are now closed, opening hours are from 9 - 5
+H22: We are now closed, opening hours are from 9 - 5
+H23: We are now closed, opening hours are from 9 - 5
+#
+# Use %H to insert the Hour (see N1: above) into the following Minutes texts 
+# Use %H+1 to insert the Hour plus one into the Minutes texts 
+# Use %A to insert the "A1: " text AM / PM
+# Use %T ot %T+1 to insert the "T??: " texts like "at midnight", see "T??: " above
+#
+# All minutes lines from 1 - 59 must be present
+#
+# We do not use "M00: " but use "H00: ", "H01: ", "H02: " etc. on the full hour
+#
+M01: Welcome to our store: %T 
+M02: Welcome to our store: %T   
+M03: Welcome to our store: %T  
+M04: Welcome to our store: %T  
+M05: Welcome to our store: %T  
+M06: Welcome to our store: %T  
+M07: Welcome to our store: %T 
+M08: Welcome to our store: %T 
+M09: Welcome to our store: %T 
+M10: Welcome to our store: %T 
+M11: Welcome to our store: %T  
+M12: Welcome to our store: %T   
+M13: Welcome to our store: %T  
+M14: Welcome to our store: %T  
+M15: Welcome to our store: %T  
+M16: Welcome to our store: %T  
+M17: Welcome to our store: %T 
+M18: Welcome to our store: %T 
+M19: Welcome to our store: %T 
+M20: Welcome to our store: %T 
+M21: Welcome to our store: %T  
+M22: Welcome to our store: %T   
+M23: Welcome to our store: %T  
+M24: Welcome to our store: %T  
+M25: Welcome to our store: %T  
+M26: Welcome to our store: %T  
+M27: Welcome to our store: %T 
+M28: Welcome to our store: %T 
+M29: Welcome to our store: %T 
+M30: Welcome to our store: %T 
+M31: Welcome to our store: %T  
+M32: Welcome to our store: %T   
+M33: Welcome to our store: %T  
+M34: Welcome to our store: %T  
+M35: Welcome to our store: %T  
+M36: Welcome to our store: %T  
+M37: Welcome to our store: %T 
+M38: Welcome to our store: %T 
+M39: Welcome to our store: %T 
+M40: Welcome to our store: %T 
+M41: Welcome to our store: %T  
+M42: Welcome to our store: %T   
+M43: Welcome to our store: %T  
+M44: Welcome to our store: %T  
+M45: Welcome to our store: %T  
+M46: Welcome to our store: %T  
+M47: Welcome to our store: %T 
+M48: Welcome to our store: %T 
+M49: Welcome to our store: %T 
+M50: Welcome to our store: %T 
+M51: Welcome to our store: %T  
+M52: Welcome to our store: %T   
+M53: Welcome to our store: %T  
+M54: Welcome to our store: %T  
+M55: Welcome to our store: %T  
+M56: Welcome to our store: %T  
+M57: Welcome to our store: %T 
+M58: Welcome to our store: %T 
+M59: Welcome to our store: %T 
+#
+# the 7 days of the week starting with Monday
+DW: Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sundays We are now closed
+#
+# the 12 months
+DM: January|February|March|April|May|June|July|August|September|October|November|December
+#
+# the 31 days of the month in groups of ten, use numbers or words whatever you like
+D1: 1|2|3|4|5|6|7|8|9|10
+D2: 11|12|13|14|15|16|17|18|19|20
+D3: 21|22|23|24|25|26|27|28|29|30
+D4: 31
+#
+# leave DT: blank if you do not want the date to appear.
+DT:  
+# DT: on %DW %DM %DN.
+#   on Tuesday May 12.
+#   %DW = day of the week, %DM = month of the year, %DN = day number
+#
+ = EOF do not remove
+  
+   

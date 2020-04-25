@@ -1,0 +1,25 @@
+# Fake alarm system, FILE MUST BE LARGER THEN 512 BYTES
+The System is READY.
+All zones <O>secured.
+Camera 1, 2 and 5 are <R>recording.
+The System is READY.
+All zones <O>secured.
+Camera 1, 2 and 5 are <R>recording.
+The System is READY.
+All zones <O>secured.
+Camera 1, 2 and 5 are <R>recording.
+The System is READY.
+All zones <O>secured.
+Camera 1, 2 and 5 are <R>recording.
+The System is READY.
+All zones <O>secured.
+Camera 1, 2 and 5 are <R>recording.
+The System is READY.
+All zones <O>secured.
+Camera 1, 2 and 5 are <R>recording.
+The System is READY.
+All zones <O>secured.
+Camera 1, 2 and 5 are <R>recording.
+The System is READY.
+All zones <O>secured.
+Camera 1, 2 and 5 are <R>recording.

@@ -1,0 +1,190 @@
+<O>Wise Clock 3 or 4 - User manual (June 2012 Version)
+<R>Wise Clock 3 or 4 has 3 buttons, named (in the silkscreen on the board) "Menu", "Set" and "Plus". 
+<G>The "Menu" button is the rightmost one as you face the clock, "Set" is the middle button.
+
+<R>By pressing the "Menu" button, the menu options are shown at the top of the screen, in sequence. 
+A menu option is selected by pressing the "Set" button. 
+Some of the menu options (e.g. "Time", "Date") allow the user to set values, for example the time,
+the date etc. To change these values, the user presses button "Plus".
+
+There are two menu "loops", one for the Apps and one for the Settings.
+
+Apps menu loop: 
+SETUP, QUOTE, BIG, TIX, WORDS, CNTDN, STOPW, SCORE, PONG, PACMN, LIVED, ANIM, TCLOK, UTC, LIFE, DEMO, NewSD, STATS.
+
+Settings menu loop: 
+APPS, ALARM, AL+/AL-, DATE+/DATE-, REMI+/REMI-, TEMP+/TEMP-, MESG+/MESG-, CITY+/CITY-, CHME+/CHME-, ANIM+/ANIM-, FONT+/FONT-,
+LOG+/LOG-, CLRLOG, CELS/FAHR, 24H+/24H-, DST+/DST-, TIME, Y M D, DAY.
+
+Selecting the "SETUP" menu entry will take you to the Settings menu loop, selecting the "APPS" menu entry will take you to the Apps menu loop.
+
+1. Set up the time
+ - if you are in the Apps menu loop then select "SETUP" to get to the settings menu.
+ - press "Menu" repeatedly until the option "TIME" is shown;
+ - press "Set": now, one of either hours or minutes will start blinking;
+ - press "Plus" to increment the blinking value; for hours, next value after 23 is 0; for minutes, next value after 59 is 0;
+ - to change between setting (blinking) hours and minutes, press "Set";
+ - after the desired time is set (values for hours and minutes are on display), wait about 4 seconds for the blinking to end; this is the time now stored by the clock.
+Note: The value for seconds is always set to 0 every time the value for hours or minutes is incremented.
+
+2. Set up the date
+ - if you are in the Apps menu loop then select "SETUP" to get to the settings menu.
+ - press "Menu" repeatedly until the option "DATE" is shown;
+ - press "Set": the top part of the display will show "Y M D", and the bottom part will show the date, in the format "YYMMDD" (year/month/day);
+ - press "Plus" to increment the blinking value; for years, next value after 50 is 0; for months, next value after 12 is 1; for days, next value after 31 is 1;
+ - to change between setting (blinking) year, month and day, press "Set";
+ - after the desired date is set (values for year, month and day are on display), wait about 4 seconds for the blinking to end; this is the date now stored by the clock.
+
+3. Set up the day-of-week
+ - if you are in the Apps menu loop then select "SETUP" to get to the settings menu.
+ - press "Menu" repeatedly until the option "DAY" is shown;
+ - press "Set": now the bottom half of the display will show the first three letters of the day of the week (e.g. Mon, Tue etc);
+ - press "Plus" to increment the day;
+ - after the desired day is reached (shown on display), wait about 4 seconds and the "DAY" option will be exit automatically; this is the day now stored by the clock.
+
+4. Set display brightness
+   Every time the "Plus" button is pressed in one of the main display modes ("Quotes", "Pong", "Pacman", "Big", etc.), the brightness of the LEDs increases one level (out of 5 levels); next after the highest brightness level is the lowest level.
+
+5. Set quote scrolling speed
+   To increase the speed of the scrolling, press the "Set" button when in "Quotes" mode.
+   There are 6 speeds. Next after the highest speed comes the slowest.
+
+6. Display modes
+   Changing the display modes is done by pressing the "Menu" button, then selecting the mode shown by pressing the button "Set".
+   The main mode is "Quote", which displays scrolling quotations, read from SD card, on the half top of the screen.
+
+Other modes are:
+ - "Pacman" - Pacman passes by every minute;
+ - "Pong" - as in the old-days tennis game console; hours and minutes are displayed on both sides of the net, at the top of the screen, and change when a player "loses", every minute, of course;
+ - "Big" - hours, minutes and seconds are displayed on the whole screen, in many different fonts. If you press the "Set" button while the last (third) binary clock is displayed all fonts will be displayed in a circular fashion.
+ - "UTC" (universal time), useful for radio amateurs;
+ - "Score" - allows keeping the game's score between two players, between 0 and 99.
+
+7. Clock settings (options)
+   Beside the current time, Wise Clock 3 can also display:
+ - current date, formatted as "Month Day, Year"; this setting is enabled/disabled through the "DATE+"/"DATE-" menu options. 
+ - temperature, in Celsius or Fahrenheit; this setting is enabled/disabled through the "TEMP+"/"TEMP-" and CELC/FAHR menu options.
+ - one out of ten personalized, user-editable message, read from message.txt file on the SD card (e.g. "Happy Birthday dear John"). 
+   This setting is enabled/disabled through the "MESG+"/"MESG-" menu options, followed by selecting one of the ten messages, M1, M2, M3 etc..
+ - reminders for special events (anniversaries, Christmas etc), also user-editable on SD card; this setting is enabled/disabled through the "REMI+"/"REMI-" menu options.
+ - hours as maximum 12 or 24; this setting is enabled/disabled through the "24H+"/"24H-" menu options;
+ - enable/disable chime (short beep at the bottom of the hour, double beep at the top of the hour), by selecting "CHME+"/"CHME-" respectively.
+
+8. Set up the alarm time
+   Alarm time can set through the menu option "ALARM".
+   Press "Menu" button until you reach this option, then press "Set".
+   From here on, the process is the same as setting up the time (point 2 above).
+   When alarm time is set and the alarm is active/enabled, the hours and minutes are separated by a dot, e.g. 15.43.
+   If the alarm is disabled, a colon is used to separate the two, e.g. 15:43.
+   In most display modes the colon/dot alternate each second.
+   With the alarm enabled it alternates colon/dot.
+   With the alarm disabled it alternates colon/blank.
+   Another alarm-related feature: 3 hours before the alarm goes off, the time is displayed in orange, 2 hours before the alarm goes off in red; otherwise, time is shown in green.
+
+9. Enable/disable the alarm
+   The alarm is activated (will sound) only if the alarm is enabled.
+   Enable/disable the alarm by selecting the "AL+"/"AL-" menu option.
+   When the alarm goes off, the clock plays "Frere Jacques", followed by a siren.
+   The alarm can be stopped (silenced) by pressing any button.
+
+10. Displaying reminders
+   At startup and at midnight the "message.txt" file is scanned for any reminder for that new day. 
+   An orange dot is displayed at the bottom during this scan.
+   If a reminder is found then it will be displayed, like the quotes, for the next 24 hours.
+   The message file may also contain the start and end date of the Daylight Saving Time period (DST), this will adjust the clock by 1 hour.
+   The 10 personal Messages are also contained in this message file and start with [M1], [M2], [M3] etc. 
+   See message.txt for more details and add your own reminders.
+
+New features in October 2011 release:
+
+- because of the large number (28) of menu entries the menu is now split in 2 loops, see above.
+
+- Stopwatch: This will show the time passed by in tenths of seconds, pressing the Set key will show the "lap" time.
+
+- Count Down Timer: This timer allows for setting a time of up to 24 hours and will beep 3 times after counting down to 0 seconds.
+
+- TIX clock: Showing the time using colored squares (if you do not know what a TIX clock is, Google it!)
+  The Plus key alows for changing the interval between 1, 4 and 60 seconds.
+
+- Time Clock: This allows for recording the amount of time spent on a project.
+  You clock "IN" at the start of the project and clock "OUT" when you are finished for the day. 
+  The Time clock will show the total amount of hours and minutes spent on that project over several days. 
+  It allows for 5 different projects.
+  A project may be cleared by pressing the Plus key when the "IN?" text is displayed, a future version will store all "IN" and "OUT" times together with the project number in an Excel compatible file on the SD card.
+  This file may then be processed on a PC using Excel.
+
+- "Word Clock": This will show the time and date using words instead of numbers.
+  All "words" come from a "word" text file on the SD card and can be changed with any editor. 
+  At runtime you may choose from 10 different "word" files. 
+  Currently there are 5 different "word" files included:
+
+  1. word1.txt The "official" English version showing: "The time is seven minutes past one o'clock in the morning on Monday the fourth of July."
+
+  2. word2.txt The short English version showing: "It's one oh-seven am" 
+
+  3. word3.txt The "funny" English version showing: "It's 5 + 2 past six and you are up early"
+
+  4. word4.txt The French texts version showing: "Le temps est sept minutes apres une heure du matin."
+
+  5. word5.txt Example file for advertisement purposes, showing texts like: "We are now closed, opening hours are from 9 - 5" or "10% extra discount from 12 - 1".
+
+  You may create your own versions with whatever texts/language you like, see the word1.txt file for details
+
+- New large Font: This new proportional font, selected by "FONT+/FONT-", is 14 dots high and has variable width (letter i = 2 dots wide, letter m = 10 dots wide).
+
+- The "message.txt" file now contains, 10 different personal messages, the "MESG+" menu entry allows for selecting one of them (M1, M2, M3 etc.).
+
+- The "Quotes" menu entry now let you choose from up to 10 different "Quotes" files named quot1.txt, quot2.txt etc.
+  several sample files (like: Texts by Shakespeare, fake alarm system, Spanish lesson, the clock's user manual (what you are reading now = "quot0.txt") are included. 
+  If you select the 11th file then the "message.txt" file is displayed which shows e.g. all 10 personal messages, reminders, DST etc.
+  You may put your own "quote" file on the SD card, one quote per line.
+  Make sure that the lines characters and end with a  Carriage Return and Linefeed character.
+  The file must be bigger than 512 bytes.
+
+- It is now possible to put characters in the non visible "video" ram and make them visible by overlaying the present display in horizontal or vertical mode.
+  When in Big Mode, press the Set Key to see a demo.
+
+- The "UTC" mode now allows for changing the number of hours difference (+12 till -12). 
+  It allows for showing the time in "Graph" (= analog clock) or "Text" mode. 
+  The "Time.txt" file is no longer used and should be removed.
+
+- The temperature (TEMP+ menu entry) will now also show the highest and lowest temperature for that day.
+ 
+- The brightness is now changed with the Plus Key and the scroll speed with the Set key. 
+  The Set key is used in some of the new apps, but the brightness can always be changed with the Plus Key. 
+
+- "STATS" menu: This menu entry will show the highest and lowest temperature for the current year, the last time the power went off and the time when the power came back.
+  It may take up to 24 hours before this info is available.
+
+New features in June 2012 release:
+- DEMO mode will now step through several modes like QUOTES, BIG, PONG, etc.
+- ANIM mode will display an animation file from the SD card.
+- NewSD mode will re-initialize the SD handler, closing and re-opening files.
+- ANIM+ SETUP entry will show an animation every 15 minutes when in BIG mode.
+- CITY+ SETUP entry will show the time and date at a different city, cycled with the messages, date, reminders, and temperature displays.  The city definitions are stored in the messages.txt file.
+- LOG+ SETUP entry will start logging the temperature, power on/off, and Time Clock projects.
+
+
+New features in April 2012 release:
+
+- "DST+/DST-" settings menu will set or clear a flag that Daylight Savings Time is in effect.
+  "DST+" increments the displayed hour and sets the flag.
+  "DST-" decrements the displayed hour and clears the flag.
+  The flag is used by the "UTC" application so UTC time is properly displayed.
+
+- "UTC" mode now uses the DST flag.
+  The saved value of the UTC offset does not change due to DST, but the calculated value will.
+  The UTC offset is now specified as local time = UTC + offset, so the time in New York has a UTC offset of -5.
+  The bug that prevented saving negative offsets has been fixed.
+
+- "QUOTE" mode now allows a single quote line to be any length.  The 175 character limit has been lifted.
+  Quote lines longer than 175 characters will be displayed in chunks, with no gaps between chunks.
+  Special character sequences in the quote control the color used to display the rest of the line.
+  <C> controls the color, where 'C' is 'R' for <R>red<G>, 'O' for <O>orange<G>, or 'G' for <G>green<G>.
+  For example, < O > will display the rest of the line in orange when you remove the spaces around the 'O'.
+  The line will be displayed in green if one of the above sequences is not part of the line.
+
+- LIVED mode will show the number of days, hours, minutes, etc. lived.  Your birthday must be specified in the messages.txt file.
+
+
+							****************

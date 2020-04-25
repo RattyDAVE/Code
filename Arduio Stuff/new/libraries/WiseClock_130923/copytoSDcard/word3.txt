@@ -1,0 +1,155 @@
+# word3.txt  The "funny" English version for WiseClock3
+#
+# Make any change you like but do NOT MOVE or DELETE any line 
+# and only change the texts BEHIND THE SINGLE SPACE AFTER THE : (COLON)
+# Comment lines start with a #
+#
+# the hours 1 - 12 and 13 - 24
+N1: one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve
+N2: thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|twenty-one|twenty-two|twenty-three|twenty-four
+#
+# A1: The AM / PM indicator, not used in 24 hour mode, see "M01: " below
+# A1: AM|PM  or  A1: am|pm  or  A1: a.m.|p.m.  or  whatever you like.
+A1: AM|PM
+#
+# additional optional texts used in the Minutes texts (instead of AM / PM)
+T00:  at midnight
+T01:  after midnight
+T02: , you should be in bed long time!
+T03: , how come you are not asleep?
+T04: , have pleasant dreams
+T05: , it's the early bird that catches the worm
+T06: , time to rise
+T07: , enjoy your breakfast
+T08: , hurry up you are late
+T09: , start working
+T10: , where is the coffee?
+T11:  in the morning
+T12:  at midday
+T13: , lunch time is over
+T14: , time for a nap
+T15:  tea time
+T16:  in the afternoon
+T17: , drop everything
+T18: , are you hungry?
+T19:  it is not too early for a drink
+T20: , let's watch the news
+T21:  at night
+T22:  in the dark
+T23: , go to your bed!
+#
+# the full hours
+H00: It is MIDNIGHT, have pleasant dreams
+H01: It is ONE o'Clock, how come you are not asleep ?
+H02: It is TWO o'Clock, please go to your bed
+H03: It's already THREE o'Clock at night
+H04: It is FOUR o'Clock, are you this early or that late ?
+H05: It is FIVE, the early bird catches the ....
+H06: It is SIX o'Clock time to rise
+H07: It is SEVEN o'Clock enjoy your breakfast
+H08: It is EIGHT, Hurry up you are late
+H09: It is NINE o'Clock enjoy your day
+H10: It is TEN o'Clock, Coffee time
+H11: It is ELEVEN but it's five somewhere else in the world
+H12: It is Midday but not in China
+H13: It is ONE o'Clock, enjoy your lunch
+H14: It is 2 hours after midday
+H15: It is THREE o'Clock, tea time
+H16: It is FOUR o'Clock, does anyone really know what time it is?
+H17: It is FIVE o'Clock, time for a drink
+H18: It is SIX o'Clock, dinner time
+H19: It is SEVEN, switch on the TV, I like to see the news
+H20: It is EIGHT do not wait
+H21: It is NINE o'Clock, did you already say your prays ?
+H22: It is TEN are you still up ?
+H23: It is ELEVEN o'clock sleep well
+#
+# Use %H to insert the Hour (see N1: above) into the following Minutes texts 
+# Use %H+1 to insert the Hour plus one into the Minutes texts 
+# Use %A to insert the "A1: " text AM / PM
+# Use %T ot %T+1 to insert the "T??: " texts like "at midnight", see "T??: " above
+#
+# All minutes lines from 1 - 59 must be present
+#
+# We do not use "M00: " but use "H00: ", "H01: ", "H02: " etc. on the full hour
+#
+M01: It's one after %H%T 
+M02: It's just after %H%T 
+M03: It's a couple of minutes past %H%T 
+M04: It's almost five past %H%T
+M05: It's now exactly five past %H%T
+M06: One minute ago it was 5 past %H%T
+M07: It's 5 + 2 past %H%T
+M08: It's almost nine minutes past %H%T
+M09: It's close to ten minutes past %H%T
+M10: It's now precisly ten past %H%T
+M11: It's about ten minutes past %H%T
+M12: It's between 10 and 15 minutes past %H%T
+M13: It's 2 minutes to a quarter past %H%T
+M14: It's close to a quarter past %H%T
+M15: It is now a quarter past %H%T
+M16: It's about a quarter past %H%T
+M17: It's now 17 min. past %H%T
+M18: It's now 10 + 8 minutes past %H o'clock%T
+M19: It's now 20 - 1 minutes past %H o'clock%T
+M20: It's 100 / 5 minutes past %H 
+M21: It's 3 x 7 minutes past %H o'clock%T
+M22: It's 2 x 11 minutes past %H %A
+M23: It's now 20-three minutes past %H o'clock%T
+M24: It's now 8 x 3 minutes past %H o'clock%T
+M25: It's now 20 + five past %H o'clock%T
+M26: It's now 20-six minutes past %H o'clock%T
+M27: It's now 20 + 7 minutes past %H o'clock%T
+M28: It's now 2 x 14 minutes past %H o'clock%T
+M29: It's now 87 / 3 minutes past %H o'clock%T
+M30: It's now half past %H%T
+M31: It's now 20-nine minutes to %H+1 o'clock%T
+M32: It's now 28 minutes to %H+1 o'clock%T
+M33: It's now 3 x 9 minutes to %H+1 o'clock%T
+M34: It's now 21 + 5 minutes to %H+1 o'clock%T
+M35: It's now 5 x 5 to %H+1 o'clock%T
+M36: It's now 240 / 10 minutes to %H+1 o'clock%T+1
+M37: It's now 23 (twenty three) minutes to %H+1 o'clock%T+1
+M38: It's now 88 / 4 minutes to %H+1 o'clock%T+1
+M39: It's now 3 x 7 minutes to %H+1 o'clock%T+1
+M40: It's now 2 x 2 x 5 minutes to %H+1 o'clock%T+1
+M41: It's now 24 - 5 minutes to %H+1 o'clock%T+1
+M42: It's now 3 x 6 minutes to %H+1 o'clock%T+1
+M43: It's now seventeen whole minutes to %H+1 o'clock%T+1
+M44: It's now 4 to the power of 2 minutes to %H+1 o'clock%T+1
+M45: It's now a quarter to %H+1 o'clock%T+1
+M46: It's now 2 x 7 minutes to %H+1 o'clock%T+1
+M47: It's now 12 + 1 minute to %H+1 o'clock%T+1
+M48: It's now 36 / 3 minutes to %H+1 o'clock%T+1
+M49: It's now 11 (eleven) minutes to %H+1 o'clock%T+1
+M50: It's now 100 / 10 minutes to %H+1 o'clock%T+1
+M51: It's now 3 x 3 minutes to %H+1 o'clock%T+1
+M52: It's now 24 / 3 minutes to %H+1 o'clock%T+1
+M53: It's now 777 / 111 minutes to %H+1 o'clock%T+1
+M54: It's now six minutes to %H+1 o'clock%T+1
+M55: It's now 2 + 3 to %H+1 o'clock%T+1
+M56: It's now four (= 2 x 2) minutes to %H+1 o'clock%T+1
+M57: It's now 1 + 1 + 1 minutes to %H+1 o'clock%T+1
+M58: It's now 4 / 2 minutes to %H+1 o'clock%T+1
+M59: It's now 1 minute to %H+1 o'clock%T+1
+#
+# the 7 days of the week starting with Monday
+DW: boring Monday|exiting Tuesday|wonderful Wednesday|joyful Thursday|fantastic Friday|lazy Saturday|bloody Sunday
+#
+# the 12 months
+DM: January|February|March|April|May|June|July|August|September|October|November|December
+#
+# the 31 days of the month in groups of ten, use numbers or words whatever you like
+D1: 1|2|3|4|5|6|7|8|9|10
+D2: 11|12|13|14|15|16|17|18|19|20
+D3: 21|22|23|24|25|26|27|28|29|30
+D4: 31
+#
+# leave DT: blank if you do not want the date to appear.
+DT: on a %DW %DM %DN.
+#   on a boring Tuesday May 12.
+#   %DW = day of the week, %DM = month of the year, %DN = day number
+#
+ = EOF do not remove
+  
+   

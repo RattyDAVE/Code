@@ -1,0 +1,206 @@
+02:28:00Z2008-02-28
+# this birthday (date and time) is used for calculation of the time lived (shown when LIVED menu is selected);
+# this line must be at the begining of the file for the program to read it;
+#------------------------------------------------------------------------------------------------
+# The format MUST be  hh:mm:ssZyyyy-MM-dd-D:UTC+nn
+#
+# - ':', 'Z', '-' and 'UTC' are static (delimiter) characters;
+# - hh is hour  (00..23), mm is minute (00..59), ss is second (00..59);
+# - MM is month (01..12), dd is day (00..31), D is day of week (0..6);
+# - nn (prefixed by either + or -) is time zone (00..23);
+#------------------------------------------------------------------------------------------------
+
+#
+# This file defines the personalized messages, reminders and Daylight Saving Times, 
+# feel free to change or add your own stuff;
+# All messages/reminders must be shorter than 200 characters in length;
+# Lines starting with # are comments only
+# Reminders and messages are displayed in red
+# Quotation marks are put around messages when they are displayed
+# Colors on a line can be changed by using color tags:
+#   <O> for orange, <R> for red, <G> for green
+
+# The following lines contain the 10 Personalized Messages (max. 200 characters long)
+
+[M1] It wasn't me!
+[M2] That's what she said!
+[M3] What time did you come home last night?
+[M4] Do not forget to call your wife
+[M5] Did you take your pill today?
+[M6] Happy Birthday to you
+[M7] The police is looking for you
+[M8] Drink more Beer!
+[M9] Does anyone really know what time it is?
+[M0] Where are you going?
+
+# Some reminder examples: Note the different spelling of the date
+# Reminders are max. 100 characters long
+# If there is no year behind the month-day then that reminder will be displayed every year, otherwise 
+# only in the year specified
+
+# Feb3 John's Birthday in 3 days !!!!!!
+# FEB04 Do not forget John's birthday only 2 days left
+# feb6 Happy Birthday John, (John's phone # 123-4567)  ----> Reminder: Pay car insurance !! <----
+# Aug31,2015 25th Anniversary  (This reminder will only be shown in 2015)
+
+Jan1  H A P P Y  NEW YEEEEEEEEEEAAAAAARRRR
+Feb2  Groundhog day
+Feb14 Happy Valentine's day
+Feb29 Leap day
+Mar17 Happy <G>St. Patrick's<R> Day!
+Apr1  April Fool's day, do not get fooled !!!!
+Jul1  C A N A D A  DAY
+Jul4  Independence day
+Oct31 Happy <O>Halloween
+Nov11 Rememberance day
+Dec18 7 Days to XMAS
+Dec25 Merry Christmas!
+Dec31 End of the Year, get ready to party !!!!
+
+Feb13,2013 Ash Wednesday
+Mar05,2014 Ash Wednesday
+Feb18,2015 Ash Wednesday
+
+Mar31,2013 Easter Sunday
+Apr20,2014 Easter Sunday
+Apr05,2015 Easter Sunday
+
+
+#  Daylight Saving Time for USA and Canada, starts 2nd Sunday in March, ends 1th Sunday in November
+#  DST+ is 2:00am -> 3:00am
+#  DST- is 3:00am -> 2:00am
+
+Mar11,2012 DST+
+Nov04,2012 DST-
+Mar10,2013 DST+
+Nov03,2013 DST-
+Mar09,2014 DST+
+Nov02,2014 DST-
+Mar08,2015 DST+
+Nov01,2015 DST-
+Mar13,2016 DST+
+Nov06,2016 DST-
+Mar12,2017 DST+
+Nov05,2017 DST-
+
+#### WiFly configuration
+# Note: use either WiFly.phrase or WiFly.key, not both
+#
+# WiFly.ssid		Wireless SSID to connect to
+# WiFly.phrase		pass phrase to use (WPA authentication)
+# WiFly.key		key to use (WEP authentication)
+# WiFly.deviceid	optional hostname to pass to DHCP server
+# WiFly.sntp		optional SNTP server IP address to synchronize time
+# WiFly.openpwd		optional password asked for when connecting to WiseClock (TCP Port 2000)
+#
+
+
+#### City data
+# London
+C[0].Name	London
+C[0].Utc	0
+C[0].Lat	52
+C[0].Lon	0
+C[0].DST+	Mar25,2012
+C[0].DST-	Oct28,2012
+C[0].DST+	Mar31,2013
+C[0].DST-	Oct27,2013
+C[0].DST+	Mar30,2014
+C[0].DST-	Oct26,2014
+C[0].DST+	Mar29,2015
+C[0].DST-	Oct25,2015
+C[0].DST+	Mar27,2016
+C[0].DST-	Oct30,2016
+C[0].DST+	Mar26,2017
+C[0].DST-	Oct29,2017
+
+## Helsinki data
+C[1].Name	Helsinki
+C[1].Utc	2
+C[1].Lat	60
+C[1].Lon	25
+C[1].DST+	Mar25,2012
+C[1].DST-	Oct28,2012
+C[1].DST+	Mar31,2013
+C[1].DST-	Oct27,2013
+C[1].DST+	Mar30,2014
+C[1].DST-	Oct26,2014
+C[1].DST+	Mar29,2015
+C[1].DST-	Oct25,2015
+C[1].DST+	Mar27,2016
+C[1].DST-	Oct30,2016
+C[1].DST+	Mar26,2017
+C[1].DST-	Oct29,2017
+
+## Pune data
+C[2].Name	Pune
+C[2].Utc	 5.5
+C[2].Lat	 19
+C[2].Lon	 74
+
+## Beijing data
+C[3].Name	Beijing
+C[3].Utc	 8
+C[3].Lat	 40
+C[3].Lon	 116
+
+## Tokyo data
+C[4].Name	Tokyo
+C[4].Utc	 9
+C[4].Lat	 36
+C[4].Lon	 140
+
+## Sydney data
+C[5].Name	Sydney
+C[5].Utc	 10
+C[5].Lat	 -34
+C[5].Lon	 151
+C[5].DST-	Apr01,2012
+C[5].DST+	Oct07,2012
+C[5].DST-	Apr07,2013
+C[5].DST+	Oct06,2013
+C[5].DST-	Apr06,2014
+C[5].DST+	Oct05,2014
+C[5].DST-	Apr05,2015
+C[5].DST+	Oct04,2015
+C[5].DST-	Apr03,2016
+C[5].DST+	Oct02,2016
+C[5].DST-	Apr02,2017
+C[5].DST+	Oct01,2017
+
+## Los Angeles data
+C[6].Name	Los Angeles
+C[6].Utc	 -8
+C[6].Lat	 34
+C[6].Lon	 -118
+C[6].DST+	Mar11,2012
+C[6].DST-	Nov04,2012
+C[6].DST+	Mar10,2013
+C[6].DST-	Nov03,2013
+C[6].DST+	Mar09,2014
+C[6].DST-	Nov02,2014
+C[6].DST+	Mar08,2015
+C[6].DST-	Nov01,2015
+C[6].DST+	Mar13,2016
+C[6].DST-	Nov06,2016
+C[6].DST+	Mar12,2017
+C[6].DST-	Nov05,2017
+
+## Toronto data
+C[7].Name	Toronto
+C[7].Utc	 -5
+C[7].Lat	 44
+C[7].Lon	 -79
+C[7].DST+	Mar11,2012
+C[7].DST-	Nov04,2012
+C[7].DST+	Mar10,2013
+C[7].DST-	Nov03,2013
+C[7].DST+	Mar09,2014
+C[7].DST-	Nov02,2014
+C[7].DST+	Mar08,2015
+C[7].DST-	Nov01,2015
+C[7].DST+	Mar13,2016
+C[7].DST-	Nov06,2016
+C[7].DST+	Mar12,2017
+C[7].DST-	Nov05,2017
+

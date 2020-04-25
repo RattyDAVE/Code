@@ -1,0 +1,168 @@
+# word4.txt  The "official" French version for WiseClock3
+#
+# MAKE ANY CHANGE YOU LIKE BUT DO NOT MOVE OR DELETE ANY LINES
+# AND ONLY CHANGE THE TEXTS BEHIND THE SINGLE SPACE AFTER THE : (COLON)
+# Comment lines start with a #
+#
+# The hours 1 - 12 and 13 - 24
+N1: une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze
+N2: une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze
+# or N2: treize|quatorze|quinze|seize|dix-sept|dix-huit|dix-neuf|vingt|vingt et une|vingt deux|vingt trois|vingt quatre
+#
+# A1: AM / PM indicator, see "M01: " below (not used in France)
+# A1: AM|PM  or  A1: am|pm  or  A1: a.m.|p.m.  or  whatever you like.
+A1: AM|PM
+#
+# additional optional texts used in the minutes texts
+T00: dans la nuit
+T01: dans la nuit
+T02: dans la nuit
+T03: dans la nuit
+T04: du matin
+T05: du matin
+T06: du matin
+T07: du matin
+T08: du matin
+T09: du matin
+T10: du matin
+T11: du matin
+T12: midi
+T13: l'apres-midi
+T14: l'apres-midi
+T15: l'apres-midi
+T16: l'apres-midi
+T17: l'apres-midi
+T18: du soir
+T19: du soir
+T20: du soir
+T21: dans la nuit
+T22: dans la nuit
+T23: dans la nuit
+#
+# the full hours texts
+H00: Il est minuit
+H01: Le temps est une heure dans la nuit
+H02: Le temps est deux heures dans la nuit
+H03: Le temps est trois heures dans la nuit
+H04: Le temps est quatre heures du matin
+H05: Le temps est cinq heures du matin
+H06: Le temps est six heures du matin
+H07: Le temps est sept heures du matin
+H08: Le temps est huit heures du matin
+H09: Le temps est neuf heures du matin
+H10: Le temps est dix heures du matin
+H11: Le temps est onze heures du matin
+H12: Il est midi
+H13: Le temps est une heure l'apres-midi
+H14: Le temps est deux heures l'apres-midi
+H15: Le temps est trois heures l'apres-midi
+H16: Le temps est quatre heures l'apres-midi
+H17: Le temps est cinq heures l'apres-midi
+H18: Le temps est six heures du soir
+H19: Le temps est sept heures du soir
+H20: Le temps est huit heures du soir
+H21: Le temps est neuf heures dans la nuit
+H22: Le temps est dix heures dans la nuit
+H23: Le temps est onze heures dans la nuit
+#
+# Use %H to insert the Hour (see N1: above) into the following minutes texts 
+# Use %H+1 to insert the Hour plus one into the minutes texts 
+# Use %A to insert the "A1: " text AM / PM
+# Use %T or %T+1 to insert the "T??: " texts like "in the morning", see "T??: " above
+#
+# All minutess lines from 1 - 59 must be present
+#
+# We do not use "M00: " but use "H00: ", "H01: ", "H02: " etc. on the full hour
+#
+M01: Le temps est d'une minute apres %H heures %T
+# or M01: Le temps est d'une minute apres %H heures %A (if you want the AM/PM indicator)
+M02: Le temps est deux minutes apres %H heures %T 
+M03: Le temps est trois minutes apres %H heures %T
+M04: Le temps est quatre minutes apres %H heures %T
+M05: Le temps est cinq minutes apres %H heures %T
+M06: Le temps est six minutes apres %H heures %T
+M07: Le temps est sept minutes apres %H heures %T
+M08: Le temps est huit minutes apres %H heures %T
+M09: Le temps est neuf minutes apres %H heures %T
+M10: Le temps est dix minutes apres %H heures %T
+M11: Le temps est onze minutes apres %H heures %T
+M12: Le temps est douze minutes apres %H heures %T
+M13: Le temps est treize minute apres %H heures %T
+M14: Le temps est quatorze minutes apres %H heures %T
+M15: Le temps est %H heures un quart %T
+M16: Le temps est seize minutes apres %H heures %T
+M17: Le temps est dix-sept minutes apres %H heures %T
+M18: Le temps est dix-huit minutes apres %H heures %T
+M19: Le temps est dix-neuf minutes apres %H heures %T
+M20: Le temps est vingt minutes apres %H heures %T
+M21: Le temps est vingt et une minutes apres %H heures %T
+M22: Le temps est vingt deux minutes apres %H heures %T
+M23: Le temps est vingt trois minutes apres %H heures %T
+M24: Le temps est vingt quatre minutes apres %H heures %T
+M25: Le temps est vingt cinq minutes apres %H heures %T
+M26: Le temps est vingt six minutes apres %H heures %T
+M27: Le temps est vingt sept minutes apres %H heures %T
+M28: Le temps est vingt huit minutes apres %H heures %T
+M29: Le temps est vingt neuf minutes apres %H heures %T
+M30: Le temps est %H et demie %T
+M31: Le temps est vingt neuf minutes a %H+1 heures %T+1
+M32: Le temps est vingt huit minutes a %H+1 heures %T+1
+M33: Le temps est vingt sept minutes a %H+1 heures %T+1
+M34: Le temps est vingt six minutes a %H+1 heures %T+1
+M35: Le temps est vingt cinq minutes a %H+1 heures %T+1
+M36: Le temps est vingt quatre minutes a %H+1 heures %T+1
+M37: Le temps est vingt trois minutes a %H+1 heures %T+1
+M38: Le temps est vingt deux minutes a %H+1 heures %T+1
+M39: Le temps est vingt une minutes a %H+1 heures %T+1
+M40: Le temps est vingt minutes a %H+1 heures %T+1
+M41: Le temps est dix-neuf minutes a %H+1 heures %T+1
+M42: Le temps est dix-huit minutes a %H+1 heures %T+1
+M43: Le temps est dix-sept minutes a %H+1 heures %T+1
+M44: Le temps est seize minutes a %H+1 heures %T+1
+M45: Le temps est un quart a %H+1 heures %T+1
+M46: Le temps est quatorze minutes a %H+1 heures %T+1
+M47: Le temps est treize minutes a %H+1 heures %T+1
+M48: Le temps est douze minutes a %H+1 heures %T+1
+M49: Le temps est onze minutes a %H+1 heures %T+1
+M50: Le temps est dix minutes a %H+1 heures %T+1
+M51: Le temps est neuf minutes a %H+1 heures %T+1
+M52: Le temps est huit minutes a %H+1 heures %T+1
+M53: Le temps est sept minutes a %H+1 heures %T+1
+M54: Le temps est six minutes a %H+1 heures %T+1
+M55: Le temps est cinq minutes a %H+1 heures %T+1
+M56: Le temps est quatre minutes a %H+1 heures %T+1
+M57: Le temps est trois minutes a %H+1 heures %T+1
+M58: Le temps est deux minutes a %H+1 heures %T+1
+M59: Le temps est une minutes a %H+1 heures %T+1
+#
+# the 7 days of the week starting with Monday
+DW: Lundi|Mardi|Mercredi|Jeudi|Vendredi|Samedi|Dimanche
+#
+# the 12 months
+DM: Janvier|Fevrier|Mars|Avril|Mai|Juin|Juillet|Aout|Septembre|Octobre|Novembre|Decembre
+#
+# the 31 days of the month in groups of ten
+D1: premiere|deuxieme|troisieme|quatrieme|cinquieme|sixieme|septieme|huitieme|neuvieme|dixieme
+D2: onzieme|douzieme|treizieme|quatorzieme|quinzieme|seizieme|dix-septieme|dix-huitieme|dix-neuvieme|vingtieme
+D3: vingt et unieme|vingt-deuxieme|vingt-troisieme|vingt-quatrieme|vingt-cinquieme|vingt-sixieme|vingt-septieme|vingt-huitieme|vingt-neuvieme|trentieme
+D4: trente et unieme
+#
+# leave DT: blank if you do not want the date to appear.
+DT: sur %DW, le %DN de %DM.
+#   sur Lundi, le troisieme de Mars.
+#   %DW = day of the week, %DN = day number, %DM = month of the year
+#
+# Use the following if you want a date like:
+#   , Lundi Mars trois.
+#
+# the 31 days of the month in groups of ten
+# D1: une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix
+# D2: onze| douze| treize| quatorze| quinze| seize| dix-sept| dix-huit| dix-neuf| vingt
+# D3: vingt et une|vingt deux|vingt trois|vingt quatre|vingt cinq|vingt six|vingt sept|vingt huit|vingt neuf|trente
+# D4: trente et une
+#
+# DT: , %DW %DM %DN.
+#
+ = EOF
+  
+   

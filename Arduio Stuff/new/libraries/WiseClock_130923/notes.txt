@@ -1,0 +1,230 @@
+Wise Clock 3/4 - New features in the Sept 2013 release:
+- Better support for multiple displays
+- "Close enough" style under "BIG" app -- slowly fills a circle for the minutes
+- Common user configuration compile options are moved to "UserConf.h".
+  Instead of editing WiseClock.cpp to select applications to build, edit "UserConf.h".
+  Instead of editing WiseClockVer.h to select WiseClock 3 or 4, edit "UserConf.h".
+  Instead of editing HT1632.h to select the number of displays, edit "UserConf.h".
+- Support for Bluetooth XBee module, JY-MCU Bluetooth module, and WiFly XBee module
+- PWRON setup option to select app to run when the clock starts up
+- better use of the dual-screen in Countdown, Stopwatch and Score, especially when big font is selected;
+- save values in Countdown and Scores when either of these apps is the default (selected in PWRON);
+- added a "conventional" stopwatch mode, that accumulates the time between button presses;
+
+
+Wise Clock 3/4 - New features in the June 2012 release:
+Now uses a FAT32 compatible SD card library.  FAT16 and FAT32 format is supported, but not FAT12.
+Can now have more than 16 files on a card, and you don't have to reformat & re-copy between editing sessions.
+
+Not all features fit on an Atmega 644P processor (they do on an Atmega 1284P)
+First choose what Apps you want to eliminate.  Copy the build tree to a safe place, then remove the
+App*.cpp and App*.h files you do not want in your sketch.  For example, if you do not want the "WORDS" app,
+remove the AppWords.cpp and AppWords.h files.  I suggest starting with AppWords*, AppSun*, and AppLines*.
+Next edit WiseClock.cpp and comment out the #include lines that correspond to the apps you want to remove.
+Proceed with building the code -- those two steps are all that are needed.
+The PACMAN and DEMO apps are both contained in the WiseClock.cpp file.  If you want to remove them
+from your build, edit WiseClock.h and comment out the
+ #define _APP_PACMAN_H_
+and/or
+ #define _APP_DEMO_H_
+lines.
+The sketch is known to fit on an Atmega 644P processor when AppWords, AppSun, and AppLines are removed.  
+
+- day/night "SUN" app has been added to show the location on the world where the sun is shining.
+  It requires a map overlay for the display, see timewitharduino.blogspot.com/2011/05/world-day-and-night-on-wise-clock-3.html
+
+- time at city option (+CITY/-CITY) will show the current time at up to ten different cities, cycling through each city.
+  Inclusion of this option is controlled by a "#define WANT_TIME_AT_CITY" line in WiseClock.h.  The cities themselves are defined
+  on the SD card, in the "message.txt" file.
+  The "time at city option" requires over 200 bytes of RAM, so you may have to eliminate it on a 644P processor, especially if you
+  have more than one display.
+
+- messages on Serial1 (optional Bluetooth XBee on Wise Clock 4) can be displayed, taking the place of the
+  personal messages (+MESG/-MESG).
+  Inclusion of this option is controlled by a "#define SERIAL_MSG" line in WiseClock.h.
+
+- HT1632 code has been tested with multiple displays.  When you have more than one display, edit HT1632.h and set
+    #define NUM_DISPLAYS
+  to the appropriate number of displays.  A 644P processor is tight on RAM, so you may need to comment out
+    #define WANT_TIME_AT_CITY
+  in WiseClock.h when you have more than one display.
+
+- Alarm/chime, scroll, and apps now run asychronously from each other.  This means that when the alarm goes off, the clock
+  no longer freezes.
+
+- DEMO mode now includes the word clock, the TIX clock, and the new animations.
+  BIG demo now cycles through all the BIG modes.
+  UTC demo now shows graph clock rather than UTC scroll
+
+- Animations
+  It is now possible to create your own animations which are stored on the SD card.
+  The APPS menu entry "ANIM" allows for continously showing one or all animations files.
+  Animation files are named: anim0.wc3 - anim9.wc3.
+  There are also 4 special animation files named: time00.wc3, time15.wc3, time30.wc3 and time45.wc3.
+  If ANIM+ is selected in the SETUP menu and the BIG mode is active then every quarter the correponding animation is
+  shown once with a random speed.
+  The preprocessor directive
+    #define WANT_ANIMATIONS
+  in WiseClock.h controls the inclusion of the quarter-hour animations.
+
+  Besides the 4 time??.wc3 animations there are currently 4 sample animations: anim1.wc3 - anim4.wc3.
+
+  You may create your own animations (there is NO programming involved) by creating individual screens in EXCEL and
+  then use a small conversion program to create the .wc3 file.
+  As the animations are stored on the SD card you can make them as big as you like.
+  For more info on creating your own animations unzip the anim.zip file which is included in this release.
+
+- Logging
+  If the "LOG+" menu is selected in the SETUP menu then the following items will be logged in the WCLOG.CSV file:
+  1. Every hour the current temperature is logged both in Celsius and Fahrenheit (32.5 degrees is stored as 325)
+  2. If the reset switch is pressed or power is restored after a power down situation then the "time stamp" for the
+     power down and up event are logged.
+  3. All entries created in the time clock (TCLOK) app are now stored in the log file.
+
+  The WCLOG.CSV file is an ASCII Comma Seperated Values file which can be opened in Excel for further analysis
+  or creating graphs etc.
+
+  Example log file:
+
+  TE,4,0,5,5,12,855,297 = Temperature record 85.5 Fahrenheit, 29.7 Celsius at 4:00am May 5 2012
+  TE,5,0,5,5,12,850,295
+  TE,6,0,5,5,12,850,295
+  TE,7,0,5,5,12,850,295
+  OF,7,12,5,5,12,0,0            = Powwer Off at 7:12am May 5 2012
+  ON,7,18,5,5,12,0,0            = Power On   at 7:18am May 5 2012
+  PI,7,20,5,5,12,1,0            = Project 1  started at 7:20am
+  PO,7,30,5,5,12,1,10           = Project 1 finished at 7:30am Total time = 10 minutes
+  TE,8,0,5,5,12,872,307
+  TE,9,0,5,5,12,885,315
+
+  All records in the log file have the same lay-out and contain a CR LF at the end:
+
+  Field 1 Type of record:
+      TE = Temperature
+      PI = Project In
+      PO = Project Out
+      ON = Power On
+      OF = Power Off
+  Field 2
+      Current Hour
+  Field 3
+      Current Minute
+  Field 4
+      Current Day
+  Field 5
+      Current Month^M
+  Field 6
+      Current Year - 2000
+  Field 7
+      If this is a Project record then Field 7 contains the Project Number
+      If it is a Temperature record then Field 7 contains the temperature in degrees Fahrenheit multiplied by 10
+  Field 8
+      If this is a Project record then Field 8 contains the total Project Time in minutes
+      If it is a Temperature record then Field 8 contains the temperature in degrees Celsius multiplied by 10
+
+  The average log record is about 25 bytes long. The logging of the temperature will take 24 x 25 bytes =  600 per day.
+  A 2 Megabyte log file will be full after about 9 years.
+
+  The SETUP menu entry CLRLG allows for clearing the complete log file.
+
+  The pre-processor directive
+    #define WANT_EVENT_LOG
+  controls the inclusion of the logging functions.  You may have to comment it out if you are using a 644P processor.
+
+- TIX
+  The spacing was changed on the TIX clock so blocks of the same color are easier to distinguish.
+  A moving red dot around the edge was added so the display won't be totally blank at midnight.
+  The red dot moves once per second, showing 0-29 left-to-right on the top of the display and
+  30-59 right-to-left on the bottom of the display.
+
+- BIG
+  An additional "font" was added, showing three horizontal rows for hours, minutes, and seconds in 6-bit binary.
+
+- WORDS
+  Words mode will now cycle through the extra messages (message, date, reminder, temperature, city) in between showing the time.
+
+- TEMP+
+  The TEMP+ option under SETUP now lets you select a temperature offset.  The temperature sensor on the DS3231 chip is
+  slightly warmer than ambient due to its proximity to the display electroncs.  This setting allows you to compensate for the
+  temperature difference.
+
+- NewSD
+  The "NewSD" app was added, which re-initializes the SD handler.  It closes any open quote files,
+  re-initializs the SD handler, re-reads the "messages.txt" file (if any), and opens the default quote file.
+  This app is used when you modify the SD card and don't want to reset the clock.
+
+
+
+Wise Clock 3/4 - New features in April 2012 release:
+
+- Because of the large number (28) of menu entries the menu is now split in 2 loops, one for the Apps and one for the Settings.
+
+  Apps menu loop: 
+  SETUP, QUOTE, BIG, TIX, CNTDN, STOPW, SCORE, PONG, PACMN, LIVED, TCLOK, UTC, LIFE, DEMO, STATS.
+
+  Settings menu loop: 
+  APPS, ALARM, AL+/AL-, DATE+/DATE-, REMI+/REMI-, TEMP+/TEMP-, MESG+/MESG-, CHME+/CHME-, FONT+/FONT-,
+  CELC/FAHR, 24H+/24H-, DST+/DST-, TIME, Y M D, DAY.
+
+Selecting the "SETUP" menu entry will take you to the Settings menu loop, selecting the "APPS" menu entry
+will take you to the Apps menu loop.
+
+- Stopwatch: This will show the time passed by in tenths of seconds, pressing the Set key will show the 
+  "lap" time.
+
+- Count Down Timer: This timer allows for setting a time of up to 24 hours and will beep 3 times after 
+  counting down to 0 seconds.
+
+- TIX clock: Showing the time using colored squares (if you do not know what a TIX clock is, Google it!)
+  The Plus key alows for changing the interval between 1, 4 and 60 seconds.
+
+- Time Clock: This allows for recording the amount of time spent on a project. You clock "IN" at the start 
+  of the project and clock "OUT" when you are finished for the day. 
+  The Time clock will show the total amount of hours and minutes spent on that project over several days. 
+  It allows for 5 different projects. A project may be cleared by pressing the Plus key when the "IN?" text 
+  is displayed, a future version will store all "IN" and "OUT" times together with the project number in 
+  an Excel compatible file on the SD card. This file may then be processed on a PC using Excel.
+
+- New large Font: This new proportional font, selected by "FONT+/FONT-", is 14 dots high and has variable 
+  width (letter i = 2 dots wide, letter m = 10 dots wide).
+
+- The "message.txt" file now contains, 10 different personal messages, the "MESG+" menu entry allows for 
+  selecting one of them (M1, M2, M3 etc.).
+
+- The "Quotes" menu entry now let you choose from up to 10 different "Quotes" files named quot1.txt, quot2.txt
+  etc. several sample files (like: Texts by Shakespeare, fake alarm system, Spanish lesson, the clock's user 
+  manual (what you are reading now = "quot0.txt") are included. 
+  If you select the 11th file then the "message.txt" file is displayed which shows e.g. all 10 personal 
+  messages, reminders, DST etc.
+  You may put your own "quote" file on the SD card, make sure that lines end with a Carriage Return and
+  Linefeed character. The file must be bigger than 512 bytes.
+  Special character sequences in the quote control the color used to display the rest of the line.
+  <C> controls the color, where 'C' is 'R' for <R>red<G>, 'O' for <O>orange<G>, or 'G' for <G>green<G>.
+  For example, < O > will display the rest of the line in orange when you remove the spaces around the 'O'.
+  The line will be displayed in green if one of the above sequences is not part of the line.
+
+- It is now possible to put characters in the non visible "video" ram and make them visible by overlaying 
+  the present display in horizontal or vertical mode. When in Big Mode, press the Set Key to see a demo.
+
+- The "UTC" mode now allows for changing the number of hours difference (+12 till -12). 
+  It allows for showing the time in "Graph" (= analog clock) or "Text" mode. 
+  The "Time.txt" file is no longer used and should be removed.
+  The DST+/DST- setting menu entry selects if Daylight Savings Time is in effect.  DST+ will set a flag
+  indicating DST is in effect, and will increment the displayed hour.  DST- will clear the flag and decrement
+  the displayed hour.  The "UTC" mode will use the DST flag as an additional offset to the current time, so
+  when the local time changes due to DST the displayed UTC time will not change.
+
+- The temperature (TEMP+ menu entry) will now also show the highest and lowest temperature for that day.
+ 
+- The brightness is now changed with the Plus Key and the scroll speed with the Set key. 
+  The Set key is used in some of the new apps, but the brightness can always be changed with the Plus Key. 
+
+- "STATS" menu: This menu entry will show the highest and lowest temperature for the current year, the last 
+  time the power went off and the time when the power came back. It may take up to 24 hours before this info 
+  is available.
+
+NOTE: The filemanager for the SD card is limited, so if you want to make any change to the files on the SD 
+card then format the SD card first and copy all files in one go to the SD card. Also there cannot be more 
+then 16 files on the SD Card.
+
+					****************
